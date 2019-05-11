@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Admin Dashboard</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="../assets/vendor/fonts/circular-std/style.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../assets/libs/css/style.css">
+<link rel="stylesheet"
+	href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="../../js/myapp.js"></script>
+<script src="../../js/controller/productController.js"></script>
+
+<script src="../../js/controller/resourceController.js"></script>
+<style type="text/css">
+.bt {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 6px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.dropdown-toggle::after {
+	display: none !important;
+}
+
+.dropdown:hover {
+	cursor: pointer;
+}
+
+.cls-img {
+	position: absolute;
+	top: -4px;
+	right: -14px;
+}
+
+.cls-img:hover {
+	cursor: pointer;
+}
+.img-fluid {
+	height: 130px !important;
+	width: 130px !important;
+}
+
+
+</style>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="productController">
+
+	<!-- ============================================================== -->
+	<!-- main wrapper -->
+	<!-- ============================================================== -->
+	<div class="dashboard-main-wrapper">
+		<!-- ============================================================== -->
+		<!-- navbar -->
+		<!-- ============================================================== -->
+		<div class="dashboard-header">
+			<nav class="navbar navbar-expand-lg bg-white fixed-top">
+				<a class="navbar-brand" href="index.html">GOD Bearing</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto navbar-right-top">
+
+						<li class="nav-item dropdown nav-user"><a class="px-5"
+							href="#"><i class="fas fa-power-off mr-2"></i>Logout</a> <!--  <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div> --></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- ============================================================== -->
+		<!-- end navbar -->
+		<!-- ============================================================== -->
+		<!-- ============================================================== -->
+		<!-- left sidebar -->
+		<!-- ============================================================== -->
+		<div class="nav-left-sidebar sidebar-dark">
+			<div class="menu-list">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarNav" aria-controls="navbarNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav flex-column">
+							<li class="nav-divider">Menu</li>
+							<li class="nav-item"><a class="nav-link "
+								href="/admin/index.html"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+							</li>
+							<li class="nav-item"><a class="nav-link active" href="#"><i
+									class="fas fa-box-open"></i>Products</a></li>
+							<li class="nav-item"><a class="nav-link" href="images.html"><i
+									class="far fa-image"></i>Website Images</a></li>
+									<li class="nav-item"><a class="nav-link" href="enquiry.html"><i
+									class="fas fa-envelope"></i>Enquiry / Messages</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- ============================================================== -->
+		<!-- end left sidebar -->
+		<!-- ============================================================== -->
+		<!-- ============================================================== -->
+		<!-- wrapper  -->
+		<!-- ============================================================== -->
+		<div class="dashboard-wrapper">
+			<div class="container-fluid dashboard-content">
+				<!-- ============================================================== -->
+				<!-- pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="page-header">
+							<h2 class="pageheader-title">Products</h2>
+							<p class="pageheader-text">Manage Products</p>
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="../index.html"
+											class="breadcrumb-link">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Products</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ============================================================== -->
+				<!-- end pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+						<div class="simple-card">
+							<ul class="nav nav-tabs" id="myTab5" role="tablist">
+								<li class="nav-item"><a
+									class="nav-link active border-left-0" id="home-tab-simple"
+									data-toggle="tab" href="#home-simple" role="tab"
+									aria-controls="home" aria-selected="true">View Products</a></li>
+								<li class="nav-item"><a class="nav-link"
+									id="profile-tab-simple" data-toggle="tab"
+									href="#profile-simple" role="tab" aria-controls="profile"
+									aria-selected="false">Add Products</a></li>
+
+							</ul>
+							<div class="tab-content" id="myTabContent5">
+								<div class="tab-pane fade show active" id="home-simple"
+									role="tabpanel" aria-labelledby="home-tab-simple">
+
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="card">
+											<h5 class="card-header d-flex">
+												<span class="mr-auto">All Products</span> <span class=""><a
+													class="btn btn-primary " id="profile-tab-simple"
+													data-toggle="tab" href="#profile-simple" role="tab"
+													aria-controls="profile" aria-selected="false">Add More
+														Products</a></span>
+											</h5>
+
+											<div class="card-body">
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col">#</th>
+															<th scope="col">ID</th>
+															<th scope="col">Image</th>
+															<th scope="col">Product Name</th>
+															<th scope="col">availability</th>
+															<th>
+														</tr>
+													</thead>
+													<tbody ng-if="products.length != 0">
+														<tr data-ng-repeat="p in products">
+															<th scope="row">{{$index+1}}</th>
+															<td>{{p.id}}</td>
+															<td style="width: 15%"><img src="{{p.defaultImage}}"
+																alt="Lights" style="width: 100%"></td>
+															<td>{{p.productName}}</td>
+															<td>{{p.availability}}</td>
+															<td>
+																<button class="btn btn-primary" data-toggle="modal"
+																	data-target="#viewModal"
+																	ng-click="openProductForEdit(p)">View/Edit</button>
+																<button class="btn btn-danger"
+																	ng-click="deleteProduct(p)">Delete</button>
+															</td>
+														</tr>
+
+													</tbody>
+													<tbody ng-if="products.length == 0">
+														<tr>
+															<td colspan="4">No Products Available. Please add
+																products</td>
+														</tr>
+
+													</tbody>
+												</table>
+												<!-- The Modal -->
+
+
+
+
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="tab-pane fade" id="profile-simple" role="tabpanel"
+									aria-labelledby="profile-tab-simple">
+									<h5 class="card-header">Add Product</h5>
+									<form>
+										<div class="form-group">
+											<label for="inputText3" class="col-form-label">Product
+												Name</label> <input id="inputText3" type="text"
+												ng-model="product.productName" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="sel1">Availability:</label> <select
+												class="form-control" id="sel1"
+												ng-model="product.availability">
+												<option value="In Stock">In Stock</option>
+												<option value="Out Of Stock">Out Of Stock</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1">Short
+												Description</label>
+											<textarea class="form-control"
+												ng-model="product.shortDescription"
+												id="exampleFormControlTextarea1" rows="4"></textarea>
+										</div>
+
+										<div class="form-group">
+											<label for="exampleFormControlTextarea2">Long
+												Description</label>
+											<textarea class="form-control"
+												id="exampleFormControlTextarea2"
+												ng-model="product.longDescription" rows="10"></textarea>
+										</div>
+										<div class="form-group">
+											<label for="checkboxes">Dimensions (As Per Catalouge)</label>
+											<br> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" ng-model="product.innerDia"
+												checked="" class="custom-control-input"><span
+												class="custom-control-label">d(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.outerDia" checked=""><span
+												class="custom-control-label">D(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.width"><span
+												class="custom-control-label">B(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.smallThickness"><span
+												class="custom-control-label">C(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.thickness"><span
+												class="custom-control-label">T(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.shaftDia"><span
+												class="custom-control-label">Shaft Dia(Inch)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.centreHeight"><span
+												class="custom-control-label">H(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.innerLength"><span
+												class="custom-control-label">J(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.outerLength"><span
+												class="custom-control-label">L(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="product.flank"><span
+												class="custom-control-label">F(mm)</span>
+											</label>
+										</div>
+
+
+										<button class="btn btn-primary mb-4" data-toggle="modal"
+											data-target="#imgModal">Choose Images</button>
+
+
+										<br> <label ng-if="product.productImages.length != 0">Select
+											Default Image</label>
+
+										<div class="row pb-5 pt-3">
+
+											<div class="col-md-2"
+												data-ng-repeat="l in product.productImages">
+
+												<label
+													class="custom-control custom-radio custom-control-inline">
+													<input name="defaultImage" ng-model="product.defaultImage"
+													value="{{l}}" checked="" type="radio" name="radio-inline"
+													checked="" class="custom-control-input"><span
+													class="custom-control-label">
+														<div class="thumbnail">
+															<img src="{{l}}" alt="Lights" style="width: 100%">
+															<p class="cls-img" ng-click="removeImage($index)">X</p>
+														</div>
+												</span>
+												</label>
+
+
+
+											</div>
+										</div>
+										
+										<button class="btn btn-primary mb-4" data-toggle="modal"
+											data-target="#imgModal3">Choose Catalouge Images</button>
+
+
+										<br> 
+										<div class="row pb-5 pt-3">
+
+											<div class="col-md-2">
+														<div class="thumbnail" ng-if="selectedImage != ''">
+															<img src="{{selectedImage}}" style="width: 100%">
+															<p class="cls-img" ng-click="removeSelectedImage()">X</p>
+														</div>
+												
+											</div>
+										
+										</div>
+
+
+
+
+										<button class="btn btn-success" ng-click="addProduct(product)">Add
+											Product</button>
+										<button class="btn btn-danger" ng-click="resetProduct()">Reset</button>
+
+									</form>
+
+
+
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- ============================================================== -->
+			<!-- footer -->
+			<!-- ============================================================== -->
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+							Copyright © 2019 GOD Bearing. All rights reserved.</div>
+						<!--  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div> -->
+					</div>
+				</div>
+			</div>
+			<!-- ============================================================== -->
+			<!-- end footer -->
+			<!-- ============================================================== -->
+		</div>
+		<!-- ============================================================== -->
+		<!-- end main wrapper -->
+		<!-- ============================================================== -->
+	</div>
+
+
+	<div class="modal fade" id="viewModal">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">View/Edit -
+						{{viewProduct.productName}}</h4>
+					<button type="button" ng-click="cancelEdit()" class="close"
+						data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
+
+						<div class="tab-outline">
+							<ul class="nav nav-tabs" id="myTab2" role="tablist">
+								<li class="nav-item"><a class="nav-link active"
+									id="tab-outline-one" data-toggle="tab" href="#outline-one"
+									role="tab" aria-controls="home" aria-selected="true">Product
+										Details</a></li>
+								<li class="nav-item"><a class="nav-link"
+									id="tab-outline-two" data-toggle="tab" href="#outline-two"
+									role="tab" aria-controls="profile" aria-selected="false">Legend</a>
+								</li>
+								<li class="nav-item"><a class="nav-link"
+									id="tab-outline-three" data-toggle="tab" href="#outline-three"
+									role="tab" aria-controls="contact" aria-selected="false">Catalouge</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent2">
+								<div class="tab-pane fade show active" id="outline-one"
+									role="tabpanel" aria-labelledby="tab-outline-one">
+									<form>
+										<div class="form-group">
+											<label for="inputText3" class="col-form-label">Product
+												Name</label> <input id="inputText3" type="text"
+												ng-model="viewProduct.productName" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="sel1">Availability:</label> <select
+												class="form-control" id="sel1"
+												ng-model="viewProduct.availability">
+												<option value="In Stock">In Stock</option>
+												<option value="Out Of Stock">Out Of Stock</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1">Short
+												Description</label>
+											<textarea class="form-control"
+												ng-model="viewProduct.shortDescription"
+												id="exampleFormControlTextarea1" rows="4"></textarea>
+										</div>
+
+										<div class="form-group">
+											<label for="exampleFormControlTextarea2">Long
+												Description</label>
+											<textarea class="form-control"
+												id="exampleFormControlTextarea2"
+												ng-model="viewProduct.longDescription" rows="10"></textarea>
+										</div>
+										<div class="form-group">
+											<label for="checkboxes">Dimensions (As Per Catalouge)</label>
+											<br> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" ng-model="viewProduct.innerDia"
+												checked="" class="custom-control-input"><span
+												class="custom-control-label">d(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.outerDia" checked=""><span
+												class="custom-control-label">D(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.width"><span
+												class="custom-control-label">B(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.smallThickness"><span
+												class="custom-control-label">C(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.thickness"><span
+												class="custom-control-label">T(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.shaftDia"><span
+												class="custom-control-label">Shaft Dia(Inch)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.centreHeight"><span
+												class="custom-control-label">H(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.innerLength"><span
+												class="custom-control-label">J(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.outerLength"><span
+												class="custom-control-label">L(mm)</span>
+											</label> <label
+												class="custom-control custom-checkbox custom-control-inline">
+												<input type="checkbox" class="custom-control-input"
+												ng-model="viewProduct.flank"><span
+												class="custom-control-label">F(mm)</span>
+											</label>
+										</div>
+
+
+										<button class="btn btn-primary mb-4" data-toggle="modal"
+											data-target="#imgModal2">Choose Images</button>
+										<br> <label ng-if="viewProduct.productImages.length != 0">Select
+											Default Image</label>
+
+										<div class="row pb-5 pt-3">
+
+											<div class="col-md-2"
+												data-ng-repeat="l in viewProduct.productImages">
+
+												<label
+													class="custom-control custom-radio custom-control-inline">
+													<input name="defaultImage"
+													ng-model="viewProduct.defaultImage" value="{{l}}"
+													checked="" type="radio" name="radio-inline" checked=""
+													class="custom-control-input"><span
+													class="custom-control-label">
+														<div class="thumbnail">
+															<img src="{{l}}" alt="Lights" style="width: 100%">
+															<p class="cls-img" ng-click="removeImageView($index)">X</p>
+														</div>
+												</span>
+												</label>
+
+
+
+											</div>
+										</div>
+										
+										
+										<button class="btn btn-primary mb-4" data-toggle="modal"
+											data-target="#imgModal3">Choose Catalouge Images</button>
+
+
+										<br> 
+										<div class="row pb-5 pt-3">
+
+											<div class="col-md-2">
+														<div class="thumbnail" ng-if="selectedImage != ''">
+															<img src="{{selectedImage}}" style="width: 100%">
+															<p class="cls-img" ng-click="removeSelectedImage()">X</p>
+														</div>
+												
+											</div>
+										
+										</div>
+										
+										<button class="btn btn-success"
+											ng-click="addProduct(viewProduct)" data-dismiss="modal">Update
+											Product</button>
+
+									</form>
+								</div>
+								<div class="tab-pane fade" id="outline-two" role="tabpanel"
+									aria-labelledby="tab-outline-two">
+									<h5>Add Header</h5>
+									<form>
+
+										<div class="input-group mb-3">
+											<input type="text" class="form-control" placeholder="Header"
+												ng-model="legendHeader">
+											<div class="input-group-append">
+												<button class="btn btn-success" ng-click="addHeader()"
+													style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Add
+													Heading</button>
+											</div>
+										</div>
+
+									</form>
+
+
+
+
+
+									<div id="accordion">
+										<div class="card mb-0"
+											ng-repeat="l in viewProduct.legendHeader">
+											<div class="card-header">
+												<a class="card-link" data-toggle="collapse"
+													href="{{'#com'+$index}}"> {{l}} </a>
+											</div>
+											<div id="{{'com'+$index}}" class="collapse"
+												data-parent="#accordion">
+												<div class="card-body">
+
+													<form>
+														<h5>Add Legends</h5>
+														<input type="hidden" ng-model="legend.productId"
+															value="{{viewProduct.id}}"> <input type="hidden"
+															ng-model="legend.legendHeader" value="{{l}}">
+
+														<div class="row">
+															<div class="form-group col-sm-2">
+																<input id="inputText31" type="text" placeholder="legend"
+																	ng-model="legend.legend" class="form-control">
+															</div>
+
+															<div class="form-group col-sm-6">
+																<input id="inputText321" type="text"
+																	placeholder="Description" ng-model="legend.description"
+																	class="form-control">
+															</div>
+															<div class="col-sm-4">
+																<button ng-if="!btnFlag" class="btn btn-primary"
+																	ng-click="addLegend(legend,l)"
+																	style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Add
+																	Legend</button>
+																<button ng-if="btnFlag" class="btn btn-primary"
+																	ng-click="addLegend(legend,l)"
+																	style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Save</button>
+																<button ng-if="btnFlag" class="btn btn-danger"
+																	ng-click="cancelEditLegend()"
+																	style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Cancel</button>
+															</div>
+														</div>
+													</form>
+
+													<table class="table">
+														<thead>
+															<tr>
+																<th scope="col">Legend</th>
+																<th scope="col">Description</th>
+																<th scope="col">Edit/Delete</th>
+
+															</tr>
+														</thead>
+														<tbody>
+															<tr ng-repeat="l1 in viewProduct.legends"
+																ng-if="l1.legendHeader == l">
+																<td>{{l1.legend}}</td>
+																<td>{{l1.description}}</td>
+																<td>
+																	<button class="btn btn-primary"
+																		ng-click="editLegend(l1)">Edit</button>
+																	<button class="btn btn-danger"
+																		ng-click="deleteLegend(l1)">Delete</button>
+																</td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="outline-three" role="tabpanel"
+									aria-labelledby="tab-outline-three">
+									<h5 class="text-center">Add Catalouge Items</h5>
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">Item</th>
+												<th scope="col" ng-if="viewProduct.shaftDia">Shaft Dia</th>
+												<th scope="col" colspan="{{catalougeDimension.length}}">Dimensions
+													(mm)</th>
+												<th scope="col">Mass (Kg)</th>
+												<th scope="col">Edit/Delete</th>
+
+											</tr>
+											<tr>
+												<th scope="col" colspan="2">Bearing No.</th>
+												<th scope="col" ng-if="viewProduct.shaftDia">(Inch)</th>
+												<th scope="col" ng-repeat="dim in catalougeDimension">{{dim}}</th>
+												<th scope="col"></th>
+												<th scope="col"></th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="text" ng-model="catItem.bearingNo1"
+													class="form-control"></td>
+												<td><input type="text" ng-model="catItem.bearingNo2"
+													class="form-control"></td>
+												<td ng-if="viewProduct.shaftDia"><input type="text"
+													ng-model="catItem.shaftDia" class="form-control"></td>
+												<td ng-if="viewProduct.innerDia"><input type="text"
+													ng-model="catItem.innerDia" class="form-control"></td>
+												<td ng-if="viewProduct.outerDia"><input type="text"
+													ng-model="catItem.outerDia" class="form-control"></td>
+												<td ng-if="viewProduct.width"><input type="text"
+													ng-model="catItem.width" class="form-control"></td>
+												<td ng-if="viewProduct.smallThickness"><input
+													type="text" ng-model="catItem.smallThickness"
+													class="form-control"></td>
+												<td ng-if="viewProduct.thickness"><input type="text"
+													ng-model="catItem.thickness" class="form-control"></td>
+												<td ng-if="viewProduct.centreHeight"><input type="text"
+													ng-model="catItem.centreHeight" class="form-control"></td>
+												<td ng-if="viewProduct.outerLength"><input type="text"
+													ng-model="catItem.outerLength" class="form-control"></td>
+												<td ng-if="viewProduct.innerLength"><input type="text"
+													ng-model="catItem.innerLength" class="form-control"></td>
+												<td ng-if="viewProduct.flank"><input type="text"
+													ng-model="catItem.flank" class="form-control"></td>
+												<td><input type="text" ng-model="catItem.weight"
+													class="form-control"></td>
+												<td>
+													<button ng-if="!btnFlag1" class="btn btn-primary"
+														ng-click="saveCatalouge(catItem)"
+														style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Add</button>
+													<button ng-if="btnFlag1" class="btn btn-primary"
+														ng-click="saveCatalouge(catItem)"
+														style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Save</button>
+													<button ng-if="btnFlag1" class="btn btn-danger"
+														ng-click="cancelEditCatalouge()"
+														style="height: 34px; padding-bottom: 0px; padding-top: 0px;">Cancel</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<hr>
+									<br>
+									<br>
+									<h5 class="text-center">Catalouge</h5>
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">Item</th>
+												<th scope="col" ng-if="viewProduct.shaftDia">Shaft Dia
+													(Inch)</th>
+												<th scope="col" colspan="{{catalougeDimension.length}}">Dimensions
+													(mm)</th>
+												<th scope="col">Mass (Kg)</th>
+												<th scope="col">Edit/Delete</th>
+
+											</tr>
+											<tr>
+												<th scope="col" colspan="2">Bearing No.</th>
+												<th scope="col" ng-if="viewProduct.shaftDia"></th>
+												<th scope="col" ng-repeat="dim in catalougeDimension">{{dim}}</th>
+												<th scope="col"></th>
+												<th scope="col"></th>
+
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr ng-repeat="ct in viewProduct.catalougeItem">
+												<td>{{ct.bearingNo1}}</td>
+												<td>{{ct.bearingNo2}}</td>
+												<td ng-if="viewProduct.shaftDia">{{ct.shaftDia}}</td>
+												<td ng-if="viewProduct.innerDia">{{ct.innerDia}}</td>
+												<td ng-if="viewProduct.outerDia">{{ct.outerDia}}</td>
+												<td ng-if="viewProduct.width">{{ct.width}}</td>
+												<td ng-if="viewProduct.smallThickness">{{ct.smallThickness}}</td>
+												<td ng-if="viewProduct.thickness">{{ct.thickness}}</td>
+												<td ng-if="viewProduct.centreHeight">{{ct.centreHeight}}</td>
+												<td ng-if="viewProduct.outerLength">{{ct.outerLength}}</td>
+												<td ng-if="viewProduct.innerLength">{{ct.innerLength}}</td>
+												<td ng-if="viewProduct.flank">{{ct.flank}}</td>
+												<td>{{ct.weight}}</td>
+												<td>
+													<button class="btn btn-primary"
+														ng-click="editCatalouge(ct)">Edit</button>
+													<button class="btn btn-danger"
+														ng-click="deleteCatalouge(ct)">Delete</button>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" ng-click="cancelEdit()"
+						class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="imgModal"
+		data-ng-controller="resController">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Select Image</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+
+							
+							<div class="px-5 pb-1">
+
+								<a href="#" ng-click="getFileList(previousDir)"
+									ng-if="currDir !== 'img'"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-arrow-left"></i></span><span>Back</span></a> <a href="#"
+									ng-click="getFileList('img')" ng-if="currDir !== 'img'" style="margin-right: 6px"> <span
+									class="rounded-circle bt text-white bg-dark" ><i
+										class="fas fa-home"></i></span><span>Home</span></a> <a href="#"
+									ng-click="crateFolder()"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-plus"></i></span><span>Create Folder</span></a> <a href="#"
+									ng-click="openFileInput()"> <span
+									class="rounded-circle bt text-white bg-dark"><i
+										class="fa fa-upload"></i></span><span>Upload</span></a> <input
+									type="file" id="imgInp"
+									accept="image/x-png,image/gif,image/jpeg"
+									style="display: none;"
+									onchange="angular.element(this).scope().uploadFile(this.files)"
+									multiple>
+							</div>
+							
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb px-5 pt-2 pb-3 border-0 ">
+										<li data-ng-repeat="d in currDir.split('/')"
+											class="breadcrumb-item"><a href="#"
+											class="breadcrumb-link">{{d}}</a></li>
+									</ol>
+								</nav>
+							</div>
+
+							<div class="row px-5 pt-1">
+
+								<div class="col-md-3" data-ng-repeat="l in list[0]">
+
+									<div class="card bg-secondary text-white mb-4"
+										ng-click="getFileList(currDir+'/'+l)">
+										<div class="card-body hov">{{l}}</div>
+									</div>
+
+								</div>
+							</div>
+
+							 <div class="row px-5 pb-5 pt-1">		
+								<div class="col-md-2 py-3" data-ng-repeat="l in list[1]">
+									
+										<img ng-click="selectImage('/'+currDir+'/'+l)"
+											data-dismiss="modal"
+											src="{{'/'+currDir+'/'+l}}" class="img-fluid img-thumbnail img-hov">
+											<!-- <div class="caption">
+												<p>{{l}}</p>
+											</div> -->
+										
+									
+								</div>
+							</div> 
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="imgModal2"
+		data-ng-controller="resController">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Select Image</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+
+							
+							<div class="px-5 pb-1">
+
+								<a href="#" ng-click="getFileList(previousDir)"
+									ng-if="currDir !== 'img'"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-arrow-left"></i></span><span>Back</span></a> <a href="#"
+									ng-click="getFileList('img')" ng-if="currDir !== 'img'" style="margin-right: 6px"> <span
+									class="rounded-circle bt text-white bg-dark" ><i
+										class="fas fa-home"></i></span><span>Home</span></a> <a href="#"
+									ng-click="crateFolder()"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-plus"></i></span><span>Create Folder</span></a> <a href="#"
+									ng-click="openFileInput()"> <span
+									class="rounded-circle bt text-white bg-dark"><i
+										class="fa fa-upload"></i></span><span>Upload</span></a> <input
+									type="file" id="imgInp"
+									accept="image/x-png,image/gif,image/jpeg"
+									style="display: none;"
+									onchange="angular.element(this).scope().uploadFile(this.files)"
+									multiple>
+							</div>
+							
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb px-5 pt-2 pb-3 border-0 ">
+										<li data-ng-repeat="d in currDir.split('/')"
+											class="breadcrumb-item"><a href="#"
+											class="breadcrumb-link">{{d}}</a></li>
+									</ol>
+								</nav>
+							</div>
+
+							<div class="row px-5 pt-1">
+
+								<div class="col-md-3" data-ng-repeat="l in list[0]">
+
+									<div class="card bg-secondary text-white mb-4"
+										ng-click="getFileList(currDir+'/'+l)">
+										<div class="card-body hov">{{l}}</div>
+									</div>
+
+								</div>
+							</div>
+
+							 <div class="row px-5 pb-5 pt-1">		
+								<div class="col-md-2 py-3" data-ng-repeat="l in list[1]">
+									
+										<img ng-click="selectImageForView('/'+currDir+'/'+l)"
+											data-dismiss="modal"
+											src="{{'/'+currDir+'/'+l}}" class="img-fluid img-thumbnail img-hov">
+											<!-- <div class="caption">
+												<p>{{l}}</p>
+											</div> -->
+										
+									
+								</div>
+							</div> 
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="imgModal3"
+		data-ng-controller="resController">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Select Image</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+
+							
+							<div class="px-5 pb-1">
+
+								<a href="#" ng-click="getFileList(previousDir)"
+									ng-if="currDir !== 'img'"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-arrow-left"></i></span><span>Back</span></a> <a href="#"
+									ng-click="getFileList('img')" ng-if="currDir !== 'img'" style="margin-right: 6px"> <span
+									class="rounded-circle bt text-white bg-dark" ><i
+										class="fas fa-home"></i></span><span>Home</span></a> <a href="#"
+									ng-click="crateFolder()"> <span
+									class="rounded-circle bt ml-0 text-white bg-dark"><i
+										class="fa fa-plus"></i></span><span>Create Folder</span></a> <a href="#"
+									ng-click="openFileInput()"> <span
+									class="rounded-circle bt text-white bg-dark"><i
+										class="fa fa-upload"></i></span><span>Upload</span></a> <input
+									type="file" id="imgInp"
+									accept="image/x-png,image/gif,image/jpeg"
+									style="display: none;"
+									onchange="angular.element(this).scope().uploadFile(this.files)"
+									multiple>
+							</div>
+							
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb px-5 pt-2 pb-3 border-0 ">
+										<li data-ng-repeat="d in currDir.split('/')"
+											class="breadcrumb-item"><a href="#"
+											class="breadcrumb-link">{{d}}</a></li>
+									</ol>
+								</nav>
+							</div>
+
+							<div class="row px-5 pt-1">
+
+								<div class="col-md-3" data-ng-repeat="l in list[0]">
+
+									<div class="card bg-secondary text-white mb-4"
+										ng-click="getFileList(currDir+'/'+l)">
+										<div class="card-body hov">{{l}}</div>
+									</div>
+
+								</div>
+							</div>
+
+							 <div class="row px-5 pb-5 pt-1">		
+								<div class="col-md-2 py-3" data-ng-repeat="l in list[1]">
+									
+										<img ng-click="selectSingleImage('/'+currDir+'/'+l)"
+											data-dismiss="modal"
+											src="{{'/'+currDir+'/'+l}}" class="img-fluid img-thumbnail img-hov">
+											<!-- <div class="caption">
+												<p>{{l}}</p>
+											</div> -->
+										
+									
+								</div>
+							</div> 
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- ============================================================== -->
+	<!-- end main wrapper -->
+	<!-- ============================================================== -->
+	<!-- Optional JavaScript -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+	<script src="../assets/libs/js/main-js.js"></script>
+</body>
+
+</html>

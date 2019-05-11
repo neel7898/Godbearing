@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Admin Dashboard</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="../assets/vendor/fonts/circular-std/style.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../assets/libs/css/style.css">
+<link rel="stylesheet"
+	href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="../../js/myapp.js"></script>
+<script src="../../js/controller/resourceController.js"></script>
+<style type="text/css">
+.bt {
+
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .dropdown-toggle::after{
+  display: none !important;
+  }
+  
+ .dropdown:hover {
+	cursor: pointer;
+}
+.img-fluid {
+	height: 130px !important;
+	width: 130px !important;
+}
+</style>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="resController">
+
+	<!-- ============================================================== -->
+	<!-- main wrapper -->
+	<!-- ============================================================== -->
+	<div class="dashboard-main-wrapper">
+		<!-- ============================================================== -->
+		<!-- navbar -->
+		<!-- ============================================================== -->
+		<div class="dashboard-header">
+			<nav class="navbar navbar-expand-lg bg-white fixed-top">
+				<a class="navbar-brand" href="index.html">GOD Bearing</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto navbar-right-top">
+
+						<li class="nav-item dropdown nav-user"><a class="px-5"
+							href="#"><i class="fas fa-power-off mr-2"></i>Logout</a> <!--  <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div> --></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- ============================================================== -->
+		<!-- end navbar -->
+		<!-- ============================================================== -->
+		<!-- ============================================================== -->
+		<!-- left sidebar -->
+		<!-- ============================================================== -->
+		<div class="nav-left-sidebar sidebar-dark">
+			<div class="menu-list">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarNav" aria-controls="navbarNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav flex-column">
+							<li class="nav-divider">Menu</li>
+							<li class="nav-item"><a class="nav-link "
+								href="/admin/index.html"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="product.html"><i
+									class="fas fa-box-open"></i>Products</a></li>
+							<li class="nav-item"><a class="nav-link active" href="#"><i
+									class="far fa-image"></i>Website Images</a></li>
+									<li class="nav-item"><a class="nav-link" href="enquiry.html"><i
+									class="fas fa-envelope"></i>Enquiry / Messages</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- ============================================================== -->
+		<!-- end left sidebar -->
+		<!-- ============================================================== -->
+		<!-- ============================================================== -->
+		<!-- wrapper  -->
+		<!-- ============================================================== -->
+		<div class="dashboard-wrapper">
+			<div class="container-fluid dashboard-content">
+				<!-- ============================================================== -->
+				<!-- pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="page-header">
+							<h2 class="pageheader-title">WebSite Images</h2>
+							<p class="pageheader-text">Manage Images</p>
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="../index.html"
+											class="breadcrumb-link">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Images</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ============================================================== -->
+				<!-- end pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+						<div class="simple-card">
+							<h5 class="pb-0 pt-3 px-3 mb-0">All Images</h5>
+							<div class="page-breadcrumb">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb p-3">
+										<li data-ng-repeat="d in currDir.split('/')" class="breadcrumb-item">
+										<a href="#"
+											class="breadcrumb-link">{{d}}</a></li>
+									</ol>
+								</nav>
+							</div>
+							
+							<div class="px-5 pb-3">
+							
+							<a href="#" ng-click="getFileList(previousDir)" ng-if="currDir !== 'img'">	<span class="rounded-circle bt text-white bg-dark"><i class="fa fa-arrow-left"></i></span><span>Back</span></a>
+							<a href="#" ng-click="getFileList('img')" ng-if="currDir !== 'img'">	<span class="rounded-circle bt text-white bg-dark"><i class="fas fa-home"></i></span><span>Home</span></a>
+							<a href="#" ng-click="crateFolder()">	<span class="rounded-circle bt text-white bg-dark"><i class="fa fa-plus"></i></span><span>Create Folder</span></a>
+							<a href="#" ng-click="openFileInput()">	<span class="rounded-circle bt text-white bg-dark"><i class="fa fa-upload"></i></span><span>Upload</span></a>
+							<input type="file" id="imgInp" accept="image/x-png,image/gif,image/jpeg" style="display: none;"  onchange="angular.element(this).scope().uploadFile(this.files)" multiple>	
+							</div>
+							
+							<div class="row px-5 pb-5 pt-1">
+								
+								<div class="col-md-3 dropdown" data-ng-repeat="l in list[0]">
+									
+									<div class="card bg-secondary text-white dropdown-toggle" data-toggle="dropdown">
+									    <div class="card-body">{{l}}</div>
+									  </div> 
+									  <div class="dropdown-menu">
+      <a class="dropdown-item" href="#" ng-click="getFileList(currDir+'/'+l)" >Open Folder</a>
+      <a class="dropdown-item text-danger" href="#" ng-click="delFolder(currDir+'/'+l,l)" >Delete Folder</a>
+    </div>
+								</div>
+							</div>
+							
+							
+							
+							 <div class="row px-5 pb-5 pt-1">		
+								<div class="col-md-2 py-3 dropdown" data-ng-repeat="l in list[1]">
+									<div class="thumbnail dropdown-toggle" data-toggle="dropdown">
+										<img
+											src="{{'/'+currDir+'/'+l}}" class="img-fluid img-thumbnail">
+											<!-- <div class="caption">
+												<p>{{l}}</p>
+											</div> -->
+										
+									</div>
+									  <div class="dropdown-menu">
+      <a class="dropdown-item text-danger" href="#" ng-click="delFolder(currDir+'/'+l,l)" >Delete File</a>
+    </div>
+								</div>
+							</div> 
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- ============================================================== -->
+			<!-- footer -->
+			<!-- ============================================================== -->
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+							Copyright © 2019 GOD Bearing. All rights reserved.</div>
+						<!--  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div> -->
+					</div>
+				</div>
+			</div>
+			<!-- ============================================================== -->
+			<!-- end footer -->
+			<!-- ============================================================== -->
+		</div>
+		<!-- ============================================================== -->
+		<!-- end main wrapper -->
+		<!-- ============================================================== -->
+	</div>
+	<!-- ============================================================== -->
+	<!-- end main wrapper -->
+	<!-- ============================================================== -->
+	<!-- Optional JavaScript -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+	<script src="../assets/libs/js/main-js.js"></script>
+</body>
+
+</html>
